@@ -19,9 +19,9 @@
                     @auth
                         <a href="{{ url('/home') }}" class="nav-link">Home</a>
                     @else
-                        <a href="{{ route('login') }}" class="btn btn-sm btn-outline-primary">Log in</a>
+                        <a href="{{ route('login') }}" class="btn btn-sm btn-outline-primary m-1">Log in</a>
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="btn btn-sm btn-outline-secondary">Register</a>
+                            <a href="{{ route('register') }}" class="btn btn-sm btn-outline-secondary m-1">Register</a>
                         @endif
                     @endauth
                 </nav>

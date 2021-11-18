@@ -45,6 +45,7 @@
         .sidebar {
             position: fixed;
             top: 0;
+            width: 200px;
             /* rtl:raw:
             right: 0;
             */
@@ -61,6 +62,7 @@
         @media (max-width: 767.98px) {
             .sidebar {
                 top: 5rem;
+                width: 100%;
             }
         }
 
@@ -76,16 +78,17 @@
 
         .sidebar .nav-link {
             font-weight: 500;
-            color: #333;
+            /* color: #333; */
+            color: #808080;
         }
 
         .sidebar .nav-link .feather {
             margin-right: 4px;
-            color: #727272;
+            /* color: #727272; */
         }
 
         .sidebar .nav-link.active {
-            color: #2470dc;
+            color: #fff;
         }
 
         .sidebar .nav-link:hover .feather,
@@ -173,6 +176,28 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
+    <script>
+
+        
+        (function () {
+            let URLactual = window.location.href.split(/[?#]/)[0];
+            let a = document.getElementsByTagName('a');
+            //console.log(a);
+
+            for (let index = 0; index < a.length; index++) {
+                const element = a[index];
+                //console.log(element.href);
+                if(URLactual==element.href){
+                    //console.log('estas en:');
+                    //console.log(URLactual);
+                    element.classList.add("active");
+                }
+                
+            }
+        })();
+
     </script>
 
 </body>
